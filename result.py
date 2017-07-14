@@ -8,8 +8,8 @@ try:
 except ImportError:
     import urllib2
 
-account_sid = "AC2134cb81e4dd473c050ed541dfcdb14f" #Your Twilio account ID
-auth_token = "6b99c13a10dd99cda6cba500259e8152"    #Your secret API Token
+account_sid = "your id" #Your Twilio account ID
+auth_token = "your apitoken"    #Your secret API Token
  
 client = Client(account_sid, auth_token)
  
@@ -26,6 +26,6 @@ while 1:
        time.sleep(9)
  
     else:
-       msg = client.messages.create(to="+917264849909", from_="+12134938745 ", body="Jai Mata Di !! RESULT AAGYA") #Will send SMS to your phone number
+       msg = client.messages.create(to="yournumber", from_="twilio_number", body="Jai Mata Di !! RESULT AAGYA") #Will send SMS to your phone number
        print ("SMS Sent")
        quit()
